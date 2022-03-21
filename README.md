@@ -15,6 +15,7 @@ $ npm install
 
 ## License
 
+[MIT](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/LICENSE)
 
 
 
