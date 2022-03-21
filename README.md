@@ -1,4 +1,4 @@
-# Rijksmuseum collection · Progressive Web Apps · 2021/22
+# Rijksmuseum collection · Progressive Web Apps · 21/22
 
 ## Installation
 
