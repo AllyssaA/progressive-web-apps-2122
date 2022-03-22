@@ -19,6 +19,8 @@
   
   main {
     background-color: #40474f;
+    margin: 2em 2em;
+    padding: 1em 1em;
   }
   
   form {
@@ -57,11 +59,6 @@
     margin: 1em 0.5em;
   }
   
-  /* images in artcollection */
-  #collections {
-    margin: 2em 2em;
-    padding: 1em 1em;
-  }
   
   section article figure img {
     width: 100vw;
