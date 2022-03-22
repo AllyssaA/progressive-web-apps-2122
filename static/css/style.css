@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Header */
+  header {
+    position: relative;
+    background-color: #40474f;
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+  header h1 {
+    padding: 0.5em 0.1em;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  main {
+    background-color: #40474f;
+  }
+  
+  form {
+    display: grid;
+  }
+  
+  form p {
+    text-align: center;
+    color: #eee;
+  }
+  
+  form button {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 1em 2em;
+    background-color: #d55140;
+    border: #d55140;
+    color: #eee;
+    font-weight: 500;
+    transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in,
+      color 0.2s ease-in;
+  }
+  
+  form button:hover {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgb(175, 69, 54);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  
+  input.search-bar {
+    max-width: 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.2em;
+    margin: 1em 0.5em;
+  }
+  
+  /* images in artcollection */
+  #collections {
+    margin: 2em 2em;
+    padding: 1em 1em;
+  }
+  
+  section article figure img {
+    width: 100vw;
+    max-width: 100%;
+  }
+  
+  article {
+    background-color: #ffcc00;
+    border: 2px solid red;
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+  
+  article a {
+    text-decoration: none;
+  }
+  article h2 {
+    font-size: 2em;
+  }
+  article h3 {
+    font-weight: light;
+  }
+  #detail section img{
+    max-width: 100%;
+  }
+  
+  @media screen and (min-width: 1080px) {
+    form {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: baseline;
+    }
+    .collection {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+  }
+  
