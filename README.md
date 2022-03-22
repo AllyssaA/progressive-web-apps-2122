@@ -5,7 +5,7 @@
 Clone repo
 
 ```
-$ clone git clone https://github.com/cmda-minor-web/progressive-web-apps-2122.git
+$ clone git clone https://github.com/AllyssaA/progressive-web-apps-2122.git
 ```
 
 Install dependencies
