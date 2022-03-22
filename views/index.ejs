@@ -2,20 +2,21 @@
 <%- include('partials/header'); %> 
 
 <main>
-<section>
-<% data.map((art) => { %>
+    <section>
+    <!-- https://www.freecodecamp.org/news/javascript-map-how-to-use-the-js-map-function-array-method/ -->
+    <% data.map((art) => { %>
 
-    <article>
-        <a href="">  
-            <h2><%= art.title %></h2>
-            <h3><%= art.principalOrFirstMaker %></h3>
-            <figure>
-                <img src="<%= art.webImage.url %>" />
-                <figcaption><%= art.productionPlaces %></figcaption>
-            </figure>
-        </a> 
-    </article>
+        <article>
+            <a href="">  
+                <h2><%= art.title %></h2>
+                <h3><%= art.principalOrFirstMaker %></h3>
+                <figure>
+                    <img src="<%= art.webImage.url %>" />
+                    <figcaption><%= art.productionPlaces %></figcaption>
+                </figure>
+            </a> 
+        </article>
 
-<% }) %> 
+    <% }) %> 
 </section>
 <%- include('partials/footer'); %>

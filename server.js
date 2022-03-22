@@ -4,8 +4,6 @@ const { json } = require("express/lib/response");
 
 const fetch = require("node-fetch");
 
-const port = 3000;
-
 // Create express app
 const app = express();
 
@@ -33,8 +31,9 @@ app.get("/", (req, res) => {
     .catch((err) => res.send(err));
 });
 
-
 // setup server
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+app.set("port", process.env.PORT || 8000)
+
+const server = app.listen(app.get("port"), function () {
+  console.log(`Server app started on port : ${app.get("port")}`)
+})
