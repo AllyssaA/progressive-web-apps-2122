@@ -30,6 +30,11 @@ app.get("/", (req, res) => {
     .catch((err) => res.send(err));
 });
 
+// detail art page
+app.get("/art/:id", (req, res) => {
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=0tlmzj3f&q=${req.params.id}`).then(function ())
+})
+
 // setup server
 app.set("port", process.env.PORT || 8000)
 
