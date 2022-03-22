@@ -1,4 +1,21 @@
-<%- include('partials/head'); -%>
-<%- include('partials/header'); -%>
+<%- include('partials/head'); %> 
+<%- include('partials/header'); %> 
 
-<%- include('partials/footer'); -%>
+
+<section>
+<% data.map((art) => { %>
+
+    <article>
+        <a href="">  
+            <h2><%= art.title %></h2>
+            <h3><%= art.principalOrFirstMaker %></h3>
+            <figure>
+                <img src="<%= art.webImage.url %>" />
+                <figcaption><%= art.productionPlaces %></figcaption>
+            </figure>
+        </a> 
+    </article>
+
+<% }) %> 
+</section>
+<%- include('partials/footer'); %>
