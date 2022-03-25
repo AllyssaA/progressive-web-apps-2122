@@ -1,6 +1,6 @@
 # Rijksmuseum collection · Progressive Web Apps · 21/22
 
-## Installation
+## 👩‍🏫 Installation
 
 Clone repo
 
@@ -13,11 +13,11 @@ Install dependencies
 $ npm install
 ```
 
-## License
+## ⚖ License
 
 [MIT](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/LICENSE)
 
-## TODO
+## ✔ TODO
 - [ ] Detailpage - render different data from api
 - [ ] Detailpage - Back to home
 - [ ] Detailpage - add styling
