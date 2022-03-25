@@ -1,7 +1,25 @@
 {
+  "name": "rijksmuseum_collection",
+  "version": "0.0.1",
+  "description": "The course Progressive Web Apps is about learning to build server side rendered applications.",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllyssaA/progressive-web-apps-2122"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "ejs"
+  ],
+  "author": "AllyssaA <https://github.com/AllyssaA>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AllyssaA/progressive-web-apps-2122/issues"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
