@@ -17,7 +17,10 @@ $ npm install
 
 [MIT](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/LICENSE)
 
-
+## TODO
+- [ ] Detailpage - render different data from api
+- [ ] Setup hosting
+- [ ] Back to home
 
 
 
