@@ -32,12 +32,20 @@ app.get("/", (req, res) => {
 
 // detail art page
 app.get("/art/:id", (req, res) => {
-  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=0tlmzj3f&q=${req.params.id}`).then(function ())
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection/${req.params.id}?key=0tlmzj3f`)
+  .then(async (response) => {
+    const artCollection = await response.json();
+    res.render("detail", {
+      pageTitle: "Detailpage | Rijksmuseum collection",
+      data: artCollection.artObject,
+    });
+  })
+  .catch((err) => res.send(err));
 })
 
 // setup server
 app.set("port", process.env.PORT || 8000)
 
 const server = app.listen(app.get("port"), function () {
-  console.log(`Server app started on port : ${app.get("port")}`)
+  console.log(`Server app started on port : ${app.get('port')}`)
 })
