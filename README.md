@@ -19,8 +19,10 @@ $ npm install
 
 ## TODO
 - [ ] Detailpage - render different data from api
+- [ ] Detailpage - Back to home
+- [ ] Detailpage - add styling
 - [ ] Setup hosting
-- [ ] Back to home
+
 
 
 
