@@ -43,6 +43,18 @@ app.get("/art/:id", (req, res) => {
   .catch((err) => res.send(err));
 })
 
+app.get("/search", (req, res) => {
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=0tlmzj3f&q=${req.query.search}&rs=20`)
+  .then(async (response) => {
+    const artCollection = await response.json();
+    res.render("index", {
+      pageTitle: "Home | Rijksmuseum collection",
+      data: artCollection.artObjects,
+    });
+  })
+  .catch((err) => res.send(err));
+})
+
 // setup server
 app.set("port", process.env.PORT || 8000)
 

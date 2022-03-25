@@ -1,11 +1,12 @@
 <header>
     <h1>Rijksmuseum collection</h1>
-    <form action="">
-      <p>Search an artist</p>
+    <form method="get" action="/search">
+      <label for="search">Search an artist</label>
       <input
-        type="text"
+        type="search"
         class="search-bar"
         placeholder="Search artist, art ..."
+        name="search"
       />
       <!-- ObjectNumber intoetsen en dan navigeren -->
       <button class="search-btn">Search</button>
