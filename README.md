@@ -1,11 +1,11 @@
-# Rijksmuseum collection · Progressive Web Apps · 2021/22
+# Rijksmuseum collection · Progressive Web Apps · 21/22
 
 ## Installation
 
 Clone repo
 
 ```
-$ clone git clone https://github.com/cmda-minor-web/progressive-web-apps-2122.git
+$ clone git clone https://github.com/AllyssaA/progressive-web-apps-2122.git
 ```
 
 Install dependencies
