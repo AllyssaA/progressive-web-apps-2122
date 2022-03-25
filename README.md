@@ -22,6 +22,7 @@ $ npm install
 - [ ] Detailpage - Back to home
 - [ ] Detailpage - add styling
 - [ ] Setup hosting
+- [ ] Placeholder text for when image or text returns empty from API
 
 
 
