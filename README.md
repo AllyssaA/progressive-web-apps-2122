@@ -23,6 +23,7 @@ $ npm install
 - [ ] Detailpage - add styling
 - [ ] Setup hosting
 - [ ] Placeholder text for when image or text returns empty from API
+- [ ] Install service worker
 - [ ] Offline fallback page by using service worker
 
 
