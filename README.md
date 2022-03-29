@@ -17,12 +17,15 @@ $ npm install
 
 [MIT](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/LICENSE)
 
-## ✔ TODO
+## ✔ Backlog
 - [ ] Detailpage - render different data from api
 - [ ] Detailpage - Back to home
 - [ ] Detailpage - add styling
 - [ ] Setup hosting
 - [ ] Placeholder text for when image or text returns empty from API
+- [ ] Offline fallback page by using service worker
+
+
 
 
 
