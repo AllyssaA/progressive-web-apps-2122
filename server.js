@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
-
 const fetch = require("node-fetch");
+const manifest = require("./static/manifest.json")
 
 // Create express app
 const app = express();
@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
       res.render("index", {
         pageTitle: "Home | Rijksmuseum collection",
         data: artCollection.artObjects,
+        manifest
       });
     })
     .catch((err) => res.send(err));
@@ -53,6 +54,12 @@ app.get("/search", (req, res) => {
     });
   })
   .catch((err) => res.send(err));
+})
+
+app.get("/offline", (req, res) => {
+  res.render("offline", {
+    pageTitle: "Offline | Rijksmuseum collection"
+  })
 })
 
 // setup server
