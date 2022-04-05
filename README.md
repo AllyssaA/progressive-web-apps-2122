@@ -21,10 +21,10 @@ $ npm install
 - [ ] Detailpage - render different data from api
 - [ ] Detailpage - Back to home
 - [ ] Detailpage - add styling
-- [ ] Setup hosting
+- [x] Setup hosting/demo
 - [ ] Placeholder text for when image or text returns empty from API
-- [ ] Install service worker
-- [ ] Offline fallback page by using service worker
+- [x] Install service worker
+- [x] Offline fallback page by using service worker
 
 
 
