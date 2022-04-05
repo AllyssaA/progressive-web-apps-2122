@@ -1,31 +1,45 @@
-const OFFLINE = "offline.ejs";
+// Cache name
+const CORE_CACHE_VERSION = "v1";
+const CORE_ASSETS = ["/", "/offline", "/css/style.css"];
+const OFFLINE_FALLBACK = "/offline";
+
+
+// Installing cache "v1", storing assets in cache
 self.addEventListener("install", (event) => {
-  console.log("Installing");
+  console.log("Installing service worker");
   event.waitUntil(
-    caches.open("test-cache").then((cache) => {
-      return cache.addAll(["/css/style.css"]);
+    caches.open(CORE_CACHE_VERSION).then(function (cache) {
+      return cache.addAll(CORE_ASSETS).then(() => {
+        console.log("adding assets to cache " + CORE_CACHE_VERSION);
+        self.skipWaiting();
+      });
     })
   );
 });
 
-self.addEventListener("fetch", (event) => {
-  console.log(event.request.url);
-  if (event.request.mode === "navigate") {
-    event.respondWith(async () => {
-      try {
-        const preloadResponse = await event.preloadResponse;
-        if (preloadResponse) {
-          return preloadResponse;
-        }
-        const networkResponse = await fetch(event.request);
-        return networkResponse;
-      } catch (error) {
-        console.log("Fetch failed, returning offline page.", error);
-
-        const cache = await caches.open("test");
-        const cachedResponse = await cache.match(OFFLINE);
-        return cachedResponse
-      }
-    });
-  }
+// Activating service worker
+self.addEventListener("activate", (event) => {
+  console.log("Activating service worker");
+  event.waitUntil(clients.claim());
 });
+
+//Serve offline page
+self.addEventListener("fetch", (event) => {
+  console.log("Fetch event:", event.request.url)
+
+  event.respondWith(
+    caches
+      .match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      })
+      .catch((error) => {
+        return caches.match(OFFLINE_FALLBACK);
+      })
+  );
+});
+
+
