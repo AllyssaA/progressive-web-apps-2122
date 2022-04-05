@@ -57,7 +57,7 @@ self.addEventListener("fetch", (event) => {
 function fetchAndCache(request, cacheName) {
   return fetch(request).then((response) => {
     if (!response.ok) {
-      throw new TypeError("idk someone went wrong");
+      throw new TypeError("Something went wrong..");
     }
 
     const clone = response.clone();
