@@ -28,8 +28,7 @@ app.get("/", (req, res) => {
       const artCollection = await response.json();
       res.render("index", {
         pageTitle: "Home | Rijksmuseum collection",
-        data: artCollection.artObjects,
-        // manifest,
+        data: artCollection.artObjects
       });
     })
     .catch((err) => res.send(err));
