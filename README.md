@@ -51,7 +51,7 @@ I've used a couple of dependencies to create and run this project:
 
 ## Activity diagram
 
-![](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/static/images/activitydiagram.JPG)
+![](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/static/images/ad.JPG)
 
 ## API
 For this project I used the [Rijksmuseum API](https://data.rijksmuseum.nl/object-metadata/api/)
@@ -79,9 +79,21 @@ When you first land on the page the service worker will be installed and a cache
 
 ## Optimizations
 
-### Compressions
+### Lighthouse
+
+|subject|percentage|
+|--|--|
+|manifest|81%|
+|performance|84%|
+|accessibility|81%|
+|best practices|92%|
+|PWA| manifest not fetched|
+
+
 
 ### Devtools
+
+![](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/static/images/devtoolschrome.JPG)
 
 
 ## ⚖ License
