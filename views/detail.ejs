@@ -1,17 +1,15 @@
-<%- include ('partials/head') %> 
-<%- include('partials/header'); %>
+<%- include ('partials/head') %> <%- include('partials/header'); %>
 
 <main>
-  <article>
-      <section>
-          <h2><%= data.title %></h2>
-          <h3><%= data.principalOrFirstMaker %></h3>
-                <figure>
-                    <img src="<%= data.webImage.url %>" />
-                    <figcaption><%= data.productionPlaces %></figcaption>
-                </figure>
-      </section>
+  <article id="detail">
+    <section>
+      <h2><%= data.title %></h2>
+      <img src="<%= data.webImage.url %>" />
+      <p><%= data.longTitle %></p>
+      <h3><%= data.principalOrFirstMaker %></h3>
+      <a id="button" href="#overview"<span>Back</span></a>
+    </section>
   </article>
 
-
-<%- include('partials/footer'); %>
+  <%- include('partials/footer'); %>
+</main>
