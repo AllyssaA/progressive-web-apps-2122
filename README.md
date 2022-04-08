@@ -1,5 +1,17 @@
 # Rijksmuseum collection · Progressive Web Apps · 21/22
 
+## Concept
+This project is for Progressive Web Apps part of the CMD Minor Web Design & Development. This project is a single page server-side app. You can view and search your favorite art from Rijksmuseum.
+
+## Refactor
+
+For this project I refactored an existing project Rijksmuseum collection from the course Web App From Scratch. One of the assignment was to change the single page app from client-side to a server-side app. I've done this by using `node.js`, `npm`, `espressjs`. I used npm as a build tool and used modules to perform optimization for performance.
+
+
+## Live demo
+
+[Demo](https://rijksmuseum-collection.herokuapp.com/)
+
 ## 👩‍🏫 Installation
 
 Clone repo
@@ -13,6 +25,65 @@ Install dependencies
 $ npm install
 ```
 
+Start application
+
+```
+$ npm start
+```
+
+Nodemon
+
+```
+$ npm dev
+```
+
+### Dependencies
+I've used a couple of dependencies to create and run this project:
+
+* [ExpressJS](https://expressjs.com/)
+* [ejs](https://www.npmjs.com/package/ejs)
+* [Node-fetch](https://www.npmjs.com/package/node-fetch)
+* [Dotenv](https://www.npmjs.com/package/dotenv)
+* [Compression](https://www.npmjs.com/package/compression)
+
+### Dev dependencies
+* [Nodemon](https://www.npmjs.com/package/nodemon)
+
+## Activity diagram
+
+![](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/static/images/activitydiagram.JPG)
+
+## API
+For this project I used the [Rijksmuseum API](https://data.rijksmuseum.nl/object-metadata/api/)
+
+To render the default page to see a collection I used the follow params 
+
+|  key  |  ps |
+|----------|:------:|
+| apiKey | 20 |
+
+To search through the API I used the following params
+
+|  key  |      q     |  ps |
+|----------|:-------------:|------:|
+| apiKey |  searchterm | 20 |
+
+## Service worker
+
+![](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/static/images/serviceworker.JPG)
+
+This project features a service worker, a service worker act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
+
+When you first land on the page the service worker will be installed and a cache v1 will be created. With this installation, the styling and offline page will be stored in this cache. The service worker will first check the cache if a URL has been previously stored, if the page has not been stored in the cache, it will retrieve from the network and the service worker will store the visited page into the cache html-cache. If the user is offline, all the pages that have been visited previously, will be able to render onto the page, if the user is offline and visit a page that has not been stored in the cache, the offline page will be rendered.
+
+
+## Optimizations
+
+### Compressions
+
+### Devtools
+
+
 ## ⚖ License
 
 [MIT](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/LICENSE)
@@ -21,11 +92,23 @@ $ npm install
 - [ ] Detailpage - render different data from api
 - [ ] Detailpage - Back to home
 - [ ] Detailpage - add styling
-- [ ] Setup hosting
-- [ ] Placeholder text for when image or text returns empty from API
-- [ ] Install service worker
-- [ ] Offline fallback page by using service worker
+- [x] Setup hosting/demo
+- [x] Install service worker
+- [x] Cache visited pages
+- [x] Cache offline page
+- [x] Cache style.css
+- [x] Offline fallback page by using service worker
+- [ ] Style offline page
+- [ ] Readme
+- [ ] Optimization - Compression
+- [ ] Optimization - Devtools
+- [ ] Optimization - do something with large images
 
+
+## Source
+
+* [Service worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+* [Caching strategies overview](https://developer.chrome.com/docs/workbox/caching-strategies-overview/)
 
 
 
