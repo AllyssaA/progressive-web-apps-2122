@@ -3,6 +3,11 @@
 ## Concept
 This project is for Progressive Web Apps part of the CMD Minor Web Design & Development. This project is a single page server-side app. You can view and search your favorite art from Rijksmuseum.
 
+## Refactor
+
+For this project I refactored an existing project Rijksmuseum collection from the course Web App From Scratch. One of the assignment was to change the single page app from client-side to a server-side app. I've done this by using `node.js`, `npm`, `espressjs`. I used npm as a build tool and used modules to perform optimization for performance.
+
+
 ## Live demo
 
 [Demo](https://rijksmuseum-collection.herokuapp.com/)
@@ -20,6 +25,18 @@ Install dependencies
 $ npm install
 ```
 
+Start application
+
+```
+$ npm start
+```
+
+Nodemon
+
+```
+$ npm dev
+```
+
 ### Dependencies
 I've used a couple of dependencies to create and run this project:
 
@@ -29,10 +46,23 @@ I've used a couple of dependencies to create and run this project:
 * [Dotenv](https://www.npmjs.com/package/dotenv)
 * [Compression](https://www.npmjs.com/package/compression)
 
+### Dev dependencies
+* [Nodemon](https://www.npmjs.com/package/nodemon)
+
+## Activity diagram
+
+![](https://github.com/AllyssaA/progressive-web-apps-2122/blob/main/static/images/activitydiagram.JPG)
 
 ## API
 For this project I used the [Rijksmuseum API](https://data.rijksmuseum.nl/object-metadata/api/)
+
 To render the default page to see a collection I used the follow params 
+
+|  key  |  ps |
+|----------|:------:|
+| apiKey | 20 |
+
+To search through the API I used the following params
 
 |  key  |      q     |  ps |
 |----------|:-------------:|------:|
